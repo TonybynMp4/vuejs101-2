@@ -1,17 +1,17 @@
 <script setup lang="ts">
-    interface FieldComponentProperties {
+    interface ButtonComponentProps {
         id: string;
         label: string;
         type?: 'submit' | 'reset' | 'button';
-        class?: string;
+        className?: string;
         style?: string;
     }
 
-    defineProps<FieldComponentProperties>();
+    defineProps<ButtonComponentProps>();
 </script>
 
 <template>
-    <button :id="id" :type="type ?? 'submit'" :class="class" :style="style">
+    <button :id="id" :type="type ?? 'submit'" :class="className" :style="style">
         {{ label }}
     </button>
 </template>

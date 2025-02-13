@@ -1,12 +1,12 @@
 <script setup lang="ts">
-    interface FieldComponentProperties {
+    interface FieldComponentProps {
         id: string;
-        type?: string;
         label: string;
         placeholder: string;
+        type?: string;
     }
 
-    defineProps<FieldComponentProperties>();
+    defineProps<FieldComponentProps>();
 </script>
 
 <template>
