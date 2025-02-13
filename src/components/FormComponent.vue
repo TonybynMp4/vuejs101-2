@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import ButtonComponent from './ButtonComponent.vue';
 import FieldComponent from './FieldComponent.vue';
 
     function onsubmit(event: Event) {
@@ -13,10 +14,11 @@ import FieldComponent from './FieldComponent.vue';
             <legend>Login</legend>
 
             <FieldComponent id="username" label="Username" placeholder="Username" />
+            <FieldComponent id="password" label="Password" placeholder="Password" type="password" />
 
             <section class="actions">
-                <button id="login">Login</button>
-                <button id="reset" type="reset">Reset</button>
+                <ButtonComponent id="login" label="Login" />
+                <ButtonComponent id="reset" label="Reset" type="reset" />
             </section>
         </fieldset>
     </form>
