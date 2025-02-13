@@ -12,7 +12,7 @@
 <template>
     <section>
         <label :for="id">{{label}}</label>
-        <input :type="type ?? 'text'" :id="id" :name="id" required placeholder="Mot de passe">
+        <input :type="type ?? 'text'" :id="id" :name="id" required :placeholder="placeholder" />
    </section>
 </template>
 
