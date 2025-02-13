@@ -2,10 +2,10 @@
 import ButtonComponent from './ButtonComponent.vue';
 import FieldComponent from './FieldComponent.vue';
 
-    function onsubmit(event: Event) {
-        event.preventDefault();
-        alert('Hello');
-    }
+function onsubmit(event: Event) {
+    event.preventDefault();
+    alert('Hello');
+}
 </script>
 
 <template>
@@ -25,7 +25,7 @@ import FieldComponent from './FieldComponent.vue';
 </template>
 
 <style scoped>
- section {
+    section {
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
@@ -33,7 +33,9 @@ import FieldComponent from './FieldComponent.vue';
 
     form {
         font-family: monospace;
+        width: 50%;
     }
+
     fieldset {
         display: flex;
         flex-direction: column;
@@ -51,5 +53,5 @@ import FieldComponent from './FieldComponent.vue';
 
     #reset {
         flex: 0 1 auto;
-}
+    }
 </style>
