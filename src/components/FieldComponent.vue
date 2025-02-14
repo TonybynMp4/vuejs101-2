@@ -7,9 +7,13 @@
 <template>
     <section>
         <label :for="id">{{label}}</label>
-        <input :type="type ?? 'text'" :id="id" :name="id" required :placeholder="placeholder" />
+        <input :type="type ?? 'text'" :id="id" :name="id" :required="required" :placeholder="placeholder" :minlength="minLength" />
    </section>
 </template>
 
-<style scoped>
+<style>
+    input:user-invalid {
+        border: 2px inset red;
+        border-radius: 2px;
+    }
 </style>

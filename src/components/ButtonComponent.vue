@@ -5,7 +5,7 @@
 </script>
 
 <template>
-    <button :id="id" :type="type ?? 'submit'" :class="className" :style="style">
+    <button :id="id" :type="type ?? 'submit'" :class="className" :style="style" :disabled="disabled">
         {{ label }}
     </button>
 </template>

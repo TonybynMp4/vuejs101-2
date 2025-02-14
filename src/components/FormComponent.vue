@@ -3,16 +3,11 @@ import ButtonComponent from './ButtonComponent.vue';
 import FieldComponent from './FieldComponent.vue';
 import type { FormComponent } from '../types';
 
-function onsubmit(event: Event) {
-    event.preventDefault();
-    alert('Hello');
-}
-
 defineProps<FormComponent>();
 </script>
 
 <template>
-    <form v-on:submit="onsubmit">
+    <form v-on:submit="onSubmit">
         <fieldset>
             <legend>Login</legend>
 

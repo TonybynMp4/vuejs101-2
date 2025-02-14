@@ -2,6 +2,7 @@ interface FormComponent {
     formLegend: string;
     fields: FieldComponent[];
     actions: ButtonComponent[];
+    onSubmit: (event: Event) => void;
 }
 
 type FieldComponent = {
@@ -9,6 +10,8 @@ type FieldComponent = {
     label: string;
     placeholder: string;
     type?: string;
+    minLength?: number;
+    required?: boolean;
 };
 
 type ButtonComponent = {
@@ -17,6 +20,7 @@ type ButtonComponent = {
     type?: 'submit' | 'reset' | 'button';
     className?: string;
     style?: string;
+    disabled?: boolean;
 };
 
 export type {
