@@ -1,12 +1,7 @@
 <script setup lang="ts">
-    interface FieldComponentProps {
-        id: string;
-        label: string;
-        placeholder: string;
-        type?: string;
-    }
+    import type { FieldComponent } from '../types';
 
-    defineProps<FieldComponentProps>();
+    defineProps<FieldComponent>();
 </script>
 
 <template>

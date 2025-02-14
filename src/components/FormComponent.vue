@@ -1,34 +1,14 @@
 <script setup lang="ts">
 import ButtonComponent from './ButtonComponent.vue';
 import FieldComponent from './FieldComponent.vue';
+import type { FormComponent } from '../types';
 
 function onsubmit(event: Event) {
     event.preventDefault();
     alert('Hello');
 }
 
-interface FormData {
-    formLegend: string;
-    fields: Field[];
-    actions: Button[];
-}
-
-type Field = {
-    id: string;
-    label: string;
-    placeholder: string;
-    type?: string;
-};
-
-type Button = {
-    id: string;
-    label: string;
-    type?: 'submit' | 'reset' | 'button';
-    className?: string;
-    style?: string;
-};
-
-defineProps<FormData>();
+defineProps<FormComponent>();
 </script>
 
 <template>

@@ -1,13 +1,7 @@
 <script setup lang="ts">
-    interface ButtonComponentProps {
-        id: string;
-        label: string;
-        type?: 'submit' | 'reset' | 'button';
-        className?: string;
-        style?: string;
-    }
+    import type { ButtonComponent } from '../types';
 
-    defineProps<ButtonComponentProps>();
+    defineProps<ButtonComponent>();
 </script>
 
 <template>
