@@ -4,6 +4,11 @@ import FieldComponent from './FieldComponent.vue';
 import type { FormComponent } from '../types';
 
 defineProps<FormComponent>();
+const emit = defineEmits(['fieldChange']);
+
+const handleFieldChange = (payload: { id: string, val: string }) => {
+    emit('fieldChange', payload);
+};
 </script>
 
 <template>
@@ -11,13 +16,14 @@ defineProps<FormComponent>();
         <fieldset>
             <legend>Login</legend>
 
-            <FieldComponent
+            <FieldComponent @fieldChange="handleFieldChange"
                 v-for="field in fields"
                 :key="field.id"
                 :id="field.id"
                 :label="field.label"
                 :placeholder="field.placeholder"
                 :type="field.type"
+                :required="field.required"
             />
 
             <section class="actions">
